@@ -79,12 +79,14 @@ const Header = () => {
               <Search size={20} />
             </button>
             {/* Create */}
-            <Link
-              to="/upload"
-              className="rounded-lg bg-violet-600 px-3 py-2 text-sm font-medium text-white transition hover:bg-violet-700 sm:px-4"
-            >
-              <span>Create</span>
-            </Link>
+            {token && (
+              <Link
+                to="/upload"
+                className="rounded-lg bg-violet-600 px-3 py-2 text-sm font-medium text-white transition hover:bg-violet-700 sm:px-4"
+              >
+                <span>Create</span>
+              </Link>
+            )}
 
             {/* Profile Dropdown */}
             <div className="relative">
