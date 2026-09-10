@@ -15,7 +15,7 @@ const Search = () => {
       setLoading(true);
 
       const response = await axios.get(
-        `http://localhost:4000/video/search?q=${encodeURIComponent(query)}`,
+        `https://hipnovivev2.onrender.com/video/search?q=${encodeURIComponent(query)}`,
       );
 
       setVideos(response.data.videos);

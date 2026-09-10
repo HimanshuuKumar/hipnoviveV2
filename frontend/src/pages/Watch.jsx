@@ -128,7 +128,7 @@ const Watch = () => {
     if (viewAdded) return;
     try {
       const response = await axios.post(
-        `http://localhost:4000/video/view/${id}`,
+        `https://hipnovivev2.onrender.com/video/view/${id}`,
       );
 
       setViews(response.data.views);
@@ -146,11 +146,14 @@ const Watch = () => {
 
       if (!token) return;
 
-      const response = await axios.get("http://localhost:4000/user/me", {
-        headers: {
-          Authorization: `Bearer ${token}`,
+      const response = await axios.get(
+        "https://hipnovivev2.onrender.com/user/me",
+        {
+          headers: {
+            Authorization: `Bearer ${token}`,
+          },
         },
-      });
+      );
 
       setUser(response.data.user);
     } catch (error) {
@@ -161,7 +164,7 @@ const Watch = () => {
   const getVideo = async () => {
     try {
       const response = await axios.get(
-        `http://localhost:4000/video/single/${id}`,
+        `https://hipnovivev2.onrender.com/video/single/${id}`,
       );
 
       const videoData = response.data.video;
@@ -198,7 +201,7 @@ const Watch = () => {
     }
     try {
       const response = await axios.post(
-        `http://localhost:4000/video/like/${id}`,
+        `https://hipnovivev2.onrender.com/video/like/${id}`,
         {},
         {
           headers: {
@@ -237,7 +240,7 @@ const Watch = () => {
 
     try {
       const response = await axios.post(
-        `http://localhost:4000/video/comment/${id}`,
+        `https://hipnovivev2.onrender.com/video/comment/${id}`,
         {
           text: commentText,
         },
@@ -260,7 +263,7 @@ const Watch = () => {
   const getComments = async () => {
     try {
       const response = await axios.get(
-        `http://localhost:4000/video/comments/${id}`,
+        `https://hipnovivev2.onrender.com/video/comments/${id}`,
       );
 
       setComments(response.data.comments);

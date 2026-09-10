@@ -10,7 +10,7 @@ const Profile = () => {
 
   const getProfile = async () => {
     try {
-      const res = await axios.get("http://localhost:4000/user/me", {
+      const res = await axios.get("https://hipnovivev2.onrender.com/user/me", {
         headers: {
           Authorization: `Bearer ${token}`,
         },

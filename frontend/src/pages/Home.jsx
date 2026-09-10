@@ -19,9 +19,8 @@ const Home = () => {
       }
 
       const response = await axios.get(
-        `http://localhost:4000/video/get?page=${page}`,
+        `https://hipnovivev2.onrender.com/video/get?page=${page}`,
       );
-
       setVideos((prev) => {
         const existingIds = new Set(prev.map((video) => video._id));
 

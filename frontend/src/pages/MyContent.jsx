@@ -12,7 +12,7 @@ const MyContent = () => {
       const token = localStorage.getItem("token");
 
       const response = await axios.get(
-        "http://localhost:4000/video/my-content",
+        "https://hipnovivev2.onrender.com/video/my-content",
         {
           headers: {
             Authorization: `Bearer ${token}`,
@@ -41,11 +41,14 @@ const MyContent = () => {
     try {
       const token = localStorage.getItem("token");
 
-      await axios.delete(`http://localhost:4000/video/delete/${videoId}`, {
-        headers: {
-          Authorization: `Bearer ${token}`,
+      await axios.delete(
+        `https://hipnovivev2.onrender.com/video/delete/${videoId}`,
+        {
+          headers: {
+            Authorization: `Bearer ${token}`,
+          },
         },
-      });
+      );
 
       setVideos((prev) => prev.filter((video) => video._id !== videoId));
     } catch (error) {

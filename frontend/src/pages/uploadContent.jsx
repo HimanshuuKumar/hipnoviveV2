@@ -128,7 +128,7 @@ const UploadContent = () => {
 
       const thumbnailUrl = await uploadThumbnailToCloudinary();
       const res = await axios.post(
-        "http://localhost:4000/video/create",
+        "https://hipnovivev2.onrender.com/video/create",
         {
           title,
           description,
